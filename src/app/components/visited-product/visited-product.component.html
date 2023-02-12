@@ -1,0 +1,103 @@
+
+
+<div class="product-wrapper">
+  <div class="product-img">
+    <div class="layer">
+      <fa-icon [icon]="faRightLeft" class="icon"></fa-icon>
+      <div class="add-to-compare"><span>أضف للمقارنة</span></div>
+      <span *ngIf="product.isSale" class="badge offer">{{product.productState}}</span>
+      <span *ngIf="product.isNew" class="badge new">{{product.productState   }}</span>
+    </div>
+    <img [src]="product.image" alt="product-image" />
+  </div>
+<div class="product-info">
+  <div class="product-details">
+    <h6 class="product-title">{{ product.title }}</h6>
+    <div *ngIf="product.isSale">
+      <div class="product-price-before-sale">
+        {{ product.priceBeforeSale }} ج.م
+      </div>
+    </div>
+    <div class="product-price">{{ product.price }}ج.م</div>
+  </div>
+  <div class="product-footer">
+    <div class="add-to-cart">
+      <img src="../../../assets/imgs/att-to cart.svg" alt="add-to-cart" 
+      (click)="addTCart()" 
+      *ngIf="!product.exist; else reoveFromCart"
+      
+      />
+      <ng-template  #reoveFromCart>
+        <img src="../../../assets/imgs/shopping-cart-remove.svg"
+        (click)=" removeFromCart()" alt="remove-from-cart" class="remove-from-cart">
+      </ng-template>
+    </div>
+    <div class="share">
+      <app-favourite></app-favourite>
+      <img src="../../../assets/imgs/share-24px.svg" alt="" />
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- <div class="product-wrapper">
+      <div class="product-img">
+
+        <div class="layer">
+      <fa-icon [icon]="faRightLeft" class="icon"></fa-icon>
+      <div class="add-to-compare">
+        <span>أضف للمقارنة</span>
+      </div>
+
+      <span *ngIf=" product.isSale" class="badge  offer ">{{product.productState}}</span>
+      <span *ngIf=" product.isNew" class="badge  new">{{product.productState}}</span>
+    </div>
+    <img [src]="product.image" alt="product-image" />
+     </div>
+     <div class="product-info">
+      <p class="product-title">{{product.title}}</p>
+      <div *ngIf="product.isSale">
+      <div class="product-price-before-sale">{{product.priceBeforeSale}} ج.م</div>
+    </div>
+    <div class="product-price">
+      {{product.price}}ج.م
+    </div>
+    <div class="product-footer">
+      <div class="add-to-cart">
+        <img src="../../../assets/imgs/att-to cart.svg" alt="add-to-cart" />
+      </div>
+      <div class="product-option">
+        <div class="share">
+          <img src="../../../assets/imgs/share-24px.svg" alt="" />
+        </div>
+        <app-favourite></app-favourite>
+      </div>
+    </div>
+</div>
+
+</div> -->
+
+
+
+
+
+

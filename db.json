@@ -1,0 +1,115 @@
+{
+  "allProduct": [
+    {
+      "id": 0,
+      "image": "../../../assets/imgs/shirt.png",
+      "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "description":
+       " تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "price": "200",
+      "priceBeforeSale":"320",
+      "quantity": 0,
+      "favourite": false,
+      "isNew":false,
+      "isSale":true,
+      "productState":"عرض",
+      "rating":2,
+      "exist":false
+    },
+    {
+      "id": 1,
+      "image": "../../assets/imgs/t-shirt.png",
+      "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "description":
+       "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "price": "120",
+      "quantity": 0,
+      "favourite": false,
+      "isNew":true,
+      "isSale":false,
+      "productState":"جديد",
+      "rating":3,
+      "exist":false
+    },
+    {
+      "id": 2,
+      "image": "../../../assets/imgs/mobile.png",
+      "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+"description":
+        "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "price": "4000",
+      "quantity": 0,
+      "favourite": false,
+      "isNew":true,
+      "isSale":false,
+      "productState":"جديد",
+      "rating":1,
+      "exist":false
+    },
+    {
+      "id": 3,
+      "image": "../../../assets/imgs/d-mobile.png",
+      "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "description":
+        "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "price": "5500",
+      "quantity": 0,
+      "favourite": false,
+      "isNew":true,
+      "isSale":false,
+      "productState":"جديد",
+      "rating":4,
+      "exist":false
+    }
+   
+  ],
+  "visitedProduct":[
+    {
+      "id": 77,
+      "image": "../../../assets/imgs/blouse.png",
+      "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "description": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "price": "200",
+      "quantity": 0,
+      "favourite": false,
+      "isNew": true,
+      "isSale": false,
+      "productState": "جديد",
+      "rating": 3,
+      "exist": false
+    },
+    {
+      "id": 66,
+      "image": "../../../assets/imgs/necklace.png",
+      "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "description": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "price": "90",
+      "quantity": 0,
+      "favourite": false,
+      "priceBeforeSale": "320",
+      "isNew": false,
+      "isSale": true,
+      "productState": "عرض",
+      "rating": 4,
+      "exist": false
+    },
+    {
+      "id": 44,
+      "image": "../../../assets/imgs/female-t-shirt.png",
+      "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "description": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+      "price": "100",
+      "quantity": 0,
+      "favourite": false,
+      "isNew": false,
+      "isSale": false,
+      "productState": "",
+      "rating": 3,
+      "exist": false
+    }
+
+
+
+  ]
+  
+}

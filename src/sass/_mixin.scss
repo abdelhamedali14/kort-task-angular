@@ -1,0 +1,92 @@
+// media queries
+//import global variabls
+@import "./variabls";
+
+@mixin mediaQ($size) {
+  @if $size == xsm {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $size == sm {
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $size == md {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $size == lg {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $size == xlg {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $size == xxlg {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+
+/// mixin for text styling
+
+@mixin customText($text) {
+  @if $text == headline-1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $textColor;
+    font-family: cairo-regular;
+  }
+  @if $text == headline-2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $primary;
+    font-family: cairo-regular;
+  }
+
+  @if $text == headline-3 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $white;
+    font-family: cairo-regular;
+  }
+  @if $text == headline-4 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $textColor;
+    font-family: cairo-regular;
+  }
+
+  @if $text == headline-5 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $primaryAccent;
+    font-family: cairo-bold;
+  }
+  @if $text == title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $primary;
+    font-family: cairo-regular;
+  }
+  @if $text ==  bodyText1 {
+    font-size:0.875rem;
+    font-weight: 400;
+    color: $white;
+    font-family: cairo-regular;
+  }
+  @if $text ==  caption-t {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: $primary;
+    font-family: cairo-regular;
+  }
+}

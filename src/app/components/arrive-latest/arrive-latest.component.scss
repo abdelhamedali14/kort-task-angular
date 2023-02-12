@@ -1,0 +1,61 @@
+@import "../../../sass/mixin";
+@import "../../../sass/variabls";
+.arrive-parent {
+  .arrive-latest-home-wrapper-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0 1rem;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    .title {
+      @include customText(headline-1);
+    }
+    .line {
+      height: 2px;
+      width: 100%;
+      border-radius: 5px;
+      background-color: $strongBackgroud;
+    }
+    .show-all-btn {
+      border: 2px $primary solid;
+      padding: 0.3rem 2rem;
+      color: $primary;
+      background-color: $regularBackground;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.2s;
+      &:hover {
+        color: $regularBackground;
+        background-color: $primary;
+        border-color: $regularBackground;
+      }
+    }
+  }
+  .arrive-latest-home-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    .latest-product-wrapper {
+      margin-bottom: 0.6rem;
+      @include mediaQ(xsm) {
+        width: 100%;
+      }
+      @include mediaQ(sm) {
+        width: 100%;
+      }
+      @include mediaQ(md) {
+        width: 49%;
+      }
+      @include mediaQ(lg) {
+        width: 33%;
+      }
+      @include mediaQ(xlg) {
+        width: 24%;
+      }
+    }
+  }
+}

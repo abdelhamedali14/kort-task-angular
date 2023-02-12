@@ -1,0 +1,27 @@
+<div class="nav-bar-wrapper">
+  <div class="links-wrapper">
+    <fa-icon
+      [icon]="faBars"
+      class="burger-icon"
+      (click)="burgerMenu()"
+    ></fa-icon>
+    <!-- check for the screenSize -->
+
+    <ul [ngClass]="isDropDown ? 'small-screen' : ''">
+      <li class="special-link">
+        الأقسام
+        <fa-icon
+          [icon]="faChevronDown"
+          class="icon"
+          (click)="DropDown()"
+        ></fa-icon>
+        <div class="departments" *ngIf="isShown">
+          <a href="">الملابس</a>
+          <a href="">الإلكترونيات</a>
+          <a href="">الإكسسوارات</a>
+        </div>
+      </li>
+      <li *ngFor="let item of items" class="nav-link">{{ item }}</li>
+    </ul>
+  </div>
+</div>

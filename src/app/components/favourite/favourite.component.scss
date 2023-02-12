@@ -1,0 +1,14 @@
+
+@import "../../../sass/variabls";
+
+.favourite-wrapper{
+  cursor: pointer;
+  .isNotChecked{
+    color: $strongBackgroud;
+  }
+  .isChecked{
+  color: red;
+
+  }
+
+}

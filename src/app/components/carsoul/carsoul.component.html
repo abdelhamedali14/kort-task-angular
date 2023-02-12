@@ -1,0 +1,15 @@
+
+<div class="slider">
+  <div>
+    <div (click)="goToPrevious()" class="leftArrow">
+      <img src="../../../assets/imgs/previous.svg" alt="previous-arrow">
+    </div>
+    <div (click)="goToNext()" class="rightArrow">  
+      <img src="../../../assets/imgs/next.svg" alt="next-arrow">
+    </div>
+  </div>
+  <div
+    class="slide"
+    [ngStyle]="{ 'background-image': getCurrentSlideUrl() }"
+  ></div>
+</div>

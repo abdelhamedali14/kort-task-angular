@@ -1,0 +1,32 @@
+@import "../../../sass/mixin";
+@import "../../../sass/variabls";
+
+.shoping-latest-wrapper {
+  padding: 1.5rem 0.5rem 1rem;
+  width: 100%;
+
+  .shoping-latest-header {
+    padding: 0rem 0rem 1.1rem 0rem;
+
+    h6 {
+      @include customText(headline-4);
+      text-align: center;
+      @include mediaQ(lg) {
+        text-align: start;
+      }
+    }
+  }
+  .allproducts-wrapper {
+    @include mediaQ(sm) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    @include mediaQ(md) {
+      justify-content: flex-start;
+    }
+    
+  }
+}

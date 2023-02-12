@@ -1,0 +1,48 @@
+@import "../../../sass/mixin";
+@import "../../../sass/variabls";
+
+.home-parent {
+  background-color: $regularBackground;
+  .home-wrapper {
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    @include mediaQ(lg) {
+      flex-wrap: nowrap;
+    }
+  }
+  .shoping-latest {
+    @include mediaQ(xsm) {
+      width: 100%;
+      margin: 0 auto;
+    }
+    @include mediaQ(sm) {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @include mediaQ(lg) {
+      width: 20%;
+    }
+  }
+  .arrive-latest {
+    @include mediaQ(xsm) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @include mediaQ(xsm) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @include mediaQ(md) {
+      width: 90%;
+    }
+    @include mediaQ(lg) {
+      width: 75%;
+    }
+  }
+}

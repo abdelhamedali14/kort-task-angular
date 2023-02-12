@@ -1,0 +1,12 @@
+<div class="shoping-latest-wrapper">
+  <div class="shoping-latest-header">
+    <h6>منتجات تصفحتها مؤخرا</h6>
+  </div>
+  <div class="allproducts-wrapper">
+    <div *ngFor="let product of productList">
+      <app-visited-product [product]="product" ></app-visited-product>
+    </div>
+  </div>
+</div>
+
+<!-- </div> -->

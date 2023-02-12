@@ -1,0 +1,26 @@
+
+
+
+//import mixin for media query
+@import "./sass/_mixin.scss";
+//////////////////////////////
+//import shared fonts
+
+@font-face {
+  font-family: cairo-Bold;
+  src: url("./assets/fonts/Cairo-Bold.ttf");
+}
+@font-face {
+  font-family:cairo-regular;
+  src: url("./assets/fonts/Cairo-Regular.ttf");
+}
+///////////////////////////
+// global styling
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+

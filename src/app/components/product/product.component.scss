@@ -1,0 +1,133 @@
+@import "../../../sass/variabls";
+@import "../../../sass/mixin";
+.latest-product-wrapper {
+  height: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .product-img {
+    position: relative;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    .layer {
+      position: absolute;
+      width: 100%;
+      height: fit-content;
+      padding: 0.5rem 0.5rem 0rem;
+      display: flex;
+      justify-content: space-between;
+      .badge {
+        padding: 0.3rem 0.6rem 0.5rem;
+        height: fit-content;
+        border-radius: 12px;
+        @include customText(bodyText1);
+      }
+      .add-to-compare {
+        @include customText(bodyText1);
+        background-color: #5a4c7a;
+        height: fit-content;
+        padding: 0.3rem 0.5rem;
+        border-radius: 8px;
+        position: absolute;
+        top: -1.7rem;
+        right: 0;
+        display: none;
+        opacity: 0;
+        transition: all 0.1s;
+      }
+      .icon {
+        font-size: 0.7rem;
+        cursor: pointer;
+        &:hover ~ .add-to-compare {
+          display: block !important;
+          opacity: 1 !important;
+        }
+      }
+      .icon .add-to-compare {
+        display: block !important;
+        opacity: 1;
+      }
+
+      .offer {
+        background-color: $secondary;
+      }
+      .new {
+        background-color: $primary;
+      }
+    }
+  }
+  .product-details {
+    overflow: hidden;
+    .product-rating {
+      display: flex !important;
+      .fill-yellow {
+        svg path {
+          fill: gold;
+        }
+      }
+    }
+    .product-title {
+      @include customText(Headlne-4);
+      padding: 0.2rem 0rem;
+      font-size: 0.92rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .product-price {
+      @include customText(headline-5);
+    }
+    .product-price--before-sale {
+      @include customText(headline-2);
+      position: relative;
+      width: fit-content;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 1px;
+        background-color: $primary;
+        top: calc(50% - 0.5px);
+        left: -5%;
+      }
+    }
+  }
+
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 0rem;
+    .remove {
+      background-color: red;
+      border: red solid 1px;
+    }
+    .add {
+      background-color: $primary;
+      border: $primary solid 1px;
+    }
+    .add-to-cart {
+      display: flex;
+      align-items: center;
+
+      border-radius: 5px;
+      padding: 0.2rem 0rem 0.2rem 1rem;
+      @include customText(headline-3);
+      font-size: 0.8rem;
+      span {
+        padding: 0 0.2rem;
+      }
+    }
+    .share {
+      cursor: pointer;
+      width: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

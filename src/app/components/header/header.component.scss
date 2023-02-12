@@ -1,0 +1,114 @@
+@import "../../../sass/mixin";
+@import "../../../sass/variabls";
+
+.header-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 1rem 2rem 1rem;
+  margin-bottom: 1rem;
+  @include mediaQ(xsm) {
+    justify-content: center;
+  }
+  @include mediaQ(sm) {
+    justify-content: center;
+  }
+  @include mediaQ(md) {
+    justify-content: space-between;
+  }
+  .logo {
+    text-align: center;
+    order: -1;
+    padding: 0.3rem 0.5rem 0.5rem;
+    width: 6rem;
+    height: 1.9rem;
+    img {
+      width: 100%;
+    }
+  }
+  .search-bar {
+    @include mediaQ(md) {
+      width: calc(100% - 26rem) !important;
+      order: 0 !important;
+    }
+    @include mediaQ(xsm) {
+      width: 90%;
+      order: 1;
+    }
+    @include mediaQ(sm) {
+      width: 90%;
+      order: 1;
+    }
+
+    .search-fild-wrapper {
+      position: relative;
+      color: $white;
+
+      input {
+        width: 100%;
+        background-color: $regularBackground;
+        padding: 0.4rem 0.5rem;
+        border-color: transparent;
+        border-radius: 5px;
+        &::placeholder {
+          @include customText(caption-t);
+        }
+        padding-right: 1.8rem;
+        &:focus {
+          border-color: red;
+        }
+      }
+      .icon {
+        position: absolute;
+        top: 13px;
+        right: 8px;
+        color: $primary;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .add-to-cart {
+    width: 15rem;
+    order: 0;
+    display: flex;
+    align-items: center;
+    .user-account {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 0 0.5rem;
+
+      background-color: $regularBackground;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+    .cart-car {
+      height: 2.8rem;
+      background-color: $regularBackground;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 10.125rem;
+      border-radius: 5px;
+      position: relative;
+      span {
+        position: relative;
+        .cart-count {
+          position: absolute;
+          height: 1rem;
+          width: 1rem;
+          border-radius: 50%;
+          font-weight: bold;
+          text-align: center;
+          top: -18px;
+          left: -62%;
+        }
+      }
+      span {
+        @include customText(title);
+      }
+    }
+  }
+}

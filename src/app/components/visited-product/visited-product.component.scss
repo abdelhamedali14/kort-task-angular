@@ -1,0 +1,131 @@
+@import "../../../sass/mixin";
+@import "../../../sass/variabls";
+.product-wrapper {
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: $white;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.6rem;
+  @include mediaQ(xsm) {
+    width: 90%;
+  }
+  @include mediaQ(sm) {
+    width: 90%;
+  }
+  @include mediaQ(sm) {
+    width: 90%;
+  }
+
+  .product-img {
+    position: relative;
+    width: 70%;
+    height: 100px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .layer {
+      position: absolute;
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .badge {
+        padding: 0.3rem 0.6rem 0.5rem;
+        height: fit-content;
+        border-radius: 12px;
+        @include customText(bodyText1);
+      }
+      .add-to-compare {
+        @include customText(bodyText1);
+        background-color: #5a4c7a;
+        height: fit-content;
+        padding: 0.3rem 0.5rem;
+        border-radius: 8px;
+        width: 6rem;
+        position: absolute;
+        text-align: center;
+        top: -1.7rem;
+        right: 0;
+        display: none;
+        opacity: 0;
+        transition: all 0.2s;
+      }
+      .icon {
+        font-size: 0.7rem;
+        cursor: pointer;
+        &:hover ~ .add-to-compare {
+          display: block !important;
+          opacity: 1 !important;
+        }
+      }
+      .icon .add-to-compare {
+        display: block !important;
+        opacity: 1;
+      }
+
+      .offer {
+        background-color: $secondary;
+      }
+      .new {
+        background-color: $primary;
+      }
+    }
+  }
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    .product-title {
+      @include customText(Headlne-4);
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .product-price {
+      @include customText(headline-5);
+    }
+    .product-price-before-sale {
+      @include customText(headline-2);
+      margin: 0 !important;
+      position: relative;
+      width: fit-content;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 1px;
+        background-color: $primary;
+        top: calc(50% - 0.5px);
+        left: -5%;
+      }
+    }
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      .add-to-cart {
+        .remove-from-cart {
+          width: 25px;
+          height: 25px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      cursor: pointer;
+
+      .share {
+        display: flex;
+        justify-content: space-between;
+        img {
+          padding: 0 0.5rem;
+          width: 75%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<div class="latest-product-wrapper">
+  <div class="product-img">
+    <div class="layer">
+      <fa-icon [icon]="faRightLeft" class="icon"></fa-icon>
+      <div class="add-to-compare"><span>أضف للمقارنة</span></div>
+      <span *ngIf="product.isSale" class="badge offer">{{
+        product.productState
+      }}</span>
+      <span *ngIf="product.isNew" class="badge new">{{
+        product.productState
+      }}</span>
+    </div>
+    <img [src]="product.image" alt="product-image" />
+  </div>
+  <div class="product-details">
+    <h6 class="product-title">{{ product.title }}</h6>
+    <div class="product-rating">
+      <div *ngFor="let star of stars; let index = index">
+        <!-- check the lenght of array by index and sent the
+       isStar flag to app rfating to decide the color of star -->
+        <div *ngIf="index + 1 <= product.rating">
+          <app-rating [isStar]="true"></app-rating>
+        </div>
+        <div *ngIf="index + 1 > product.rating">
+          <app-rating [isStar]="false"></app-rating>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="product.isSale">
+      <div class="product-price--before-sale">
+        {{ product.priceBeforeSale }} ج.م
+      </div>
+    </div>
+    <div class="product-price">{{ product.price }}ج.م</div>
+  </div>
+  <div class="product-footer">
+    <button class="add-to-cart add" (click)="addTCart()" *ngIf="!product.exist; else reoveFromCart">
+      <img src="../../../assets/imgs/add-to-cart.svg" alt="add-to-cart" />
+      <span>أضف إلي السلة</span>
+    </button>
+    <ng-template #reoveFromCart>
+      <button
+        class="add-to-cart remove"
+        (click)=" removeFromCart()"
+        [disabled]="isExist"
+      >
+        <img src="../../../assets/imgs/add-to-cart.svg" alt="add-to-cart" />
+        <span>أزل إلي السلة</span>
+      </button>
+    </ng-template>
+
+    <div class="share">
+      <img src="../../../assets/imgs/share-24px.svg" alt="" />
+      <app-favourite></app-favourite>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,14 @@
+
+ <div class="arrive-parent">
+  <div class="arrive-latest-home-wrapper-header">
+    <h6 class="title">وصل حديثا</h6>
+    <div class="line"></div>
+    <button class="show-all-btn">عرض الكل</button>
+  </div>
+  <div class="arrive-latest-home-wrapper">
+    <div *ngFor="let product of productList"
+        class="latest-product-wrapper">
+      <app-product   [product]="product"></app-product>
+    </div>
+  </div>
+</div> 
